@@ -1,0 +1,21 @@
+{% extends 'bitbox/base.html' %}
+
+
+{% block content %}
+
+{% if results %}
+	<h1>Congratulation!</h1>
+	<h3> You will get 40% discount of bitbox online IT job coaching (Batch-4) </h3>
+	<center>
+		<br>
+		{% for result in results %}
+  		<h3>{{result.name}}</h3>
+  		<p>{{result.batch}}</p>
+		{% endfor %}
+	</center> 
+{% else %}
+	<h1>Sorry! you are not registered in previous  bitbox course </h1>
+{% endif %}
+
+ 
+{% endblock %}
